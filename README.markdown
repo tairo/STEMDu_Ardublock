@@ -41,6 +41,12 @@ ToDo
 License
 ----
 
+Copyright (C) 2014 Tairo Nomura
+
+Additional files for STEM Du hardware and some functions were written by Tairo Nomura, Saitama University, Japan.
+Those files also under same license as above original ArduBlock.
+
+----
 Copyright (C) 2011 David Li and He Qichen
 
 This file is part of ArduBlock.
@@ -57,3 +63,4 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with ArduBlock.  If not, see <http://www.gnu.org/licenses/>.
+
