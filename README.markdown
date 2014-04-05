@@ -1,7 +1,11 @@
-ArduBlock
+ArduBlock for STEM Du
 ======
 
 ArduBlock is a Block Programming Language for Arduino. The language and functions model closely to [Arduino Language Reference](http://arduino.cc/en/Reference/HomePage)
+
+This private branch is special for STEM Du hardware. See also https://github.com/tairo/STEMDu about STEM Du project.
+
+Following documents are from original ArduBlock distribution. You can find original from https://github.com/taweili/ardublock
 
 Installation
 ----
