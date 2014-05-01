@@ -44,7 +44,7 @@ License
 Copyright (C) 2014 Tairo Nomura
 
 Additional files for STEM Du hardware and some functions were written by Tairo Nomura, Saitama University, Japan.
-Those files also under same license as above original ArduBlock.
+Those files also under GPLv3 same as below original ArduBlock.
 
 ----
 Copyright (C) 2011 David Li and He Qichen
