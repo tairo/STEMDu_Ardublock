@@ -12,12 +12,13 @@ public class SDWrite2Block extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 	    translator.addDefinitionCommand("#include <SD.h>\n");
 	    translator.addSetupCommand("\tconst int chipSelect = 10;\n\tSD.begin(chipSelect);\n");
 		TranslatorBlock data = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret="\tFile dataFile = SD.open(\""+data.toCode()+"\", FILE_WRITE);\n";
+		String ret="\tFile datafile = SD.open(\""+data.toCode()+"\", FILE_WRITE);\n";
 		ret+="\tif(datafile){\n";
         data=this.getRequiredTranslatorBlockAtSocket(1, "\t\tdatafile.print( ", " );\n\t\tdatafile.print(\" \");\n");
         ret+=data.toCode();

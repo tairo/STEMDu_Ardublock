@@ -13,16 +13,17 @@ public class DigitalOutputBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		if (translatorBlock instanceof NumberBlock)
 		{
 			String number = translatorBlock.toCode();
-			String setupCode = "\tpinMode( " + number + " , OUTPUT);";
+			String setupCode = "pinMode( " + number + " , OUTPUT);";
 			translator.addSetupCommand(setupCode);
 			
-			String ret = "\tdigitalWrite( ";
+			String ret = "digitalWrite( ";
 			ret = ret + number;
 			ret = ret + " , ";
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);

@@ -13,6 +13,7 @@ public class DigitalInputBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
@@ -31,9 +32,9 @@ public class DigitalInputBlock extends TranslatorBlock
 	{
 		String number;
 		number = translatorBlock.toCode();
-		translator.addInputPin(Long.parseLong(number));
+		translator.addInputPin(number.trim());
 		
-		String ret = "\tdigitalRead( ";
+		String ret = "digitalRead(";
 		ret = ret + number;
 		ret = ret + ")";
 		return codePrefix + ret + codeSuffix;

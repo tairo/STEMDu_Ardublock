@@ -1,4 +1,4 @@
-
+// Not now used by standard blocks. Retained as long as it is referenced by legacy blocks.
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
@@ -14,6 +14,7 @@ public class ServoBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);

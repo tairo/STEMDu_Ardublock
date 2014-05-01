@@ -12,14 +12,14 @@ public class InversedDigitalOutputBlock extends DigitalOutputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		if (translatorBlock instanceof NumberBlock)
 		{
 			String number = translatorBlock.toCode();
-			String setupCode = "pinMode( " + number + " , OUTPUT);";
-			translator.addSetupCommand(setupCode);
+			translator.addOutputPin(number.trim());
 			
 			String ret = "digitalWrite( ";
 			ret = ret + number;

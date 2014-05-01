@@ -3,11 +3,13 @@ package com.ardublock.core;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+
+import processing.app.Editor;
 
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
@@ -20,6 +22,7 @@ public class Context
 	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
 	public final static String ARDUBLOCK_LANG_PATH = "/com/ardublock/block/ardublock.xml";
 	public final static String ARDUINO_VERSION_UNKNOWN = "unknown";
+	public final boolean isNeedAutoFormat = true;
 	
 	private static Context singletonContext;
 	
@@ -31,8 +34,10 @@ public class Context
 	private boolean isInArduino = false;
 	private String arduinoVersionString = ARDUINO_VERSION_UNKNOWN;
 	private OsType osType; 
-			
+
 	final public static String APP_NAME = "ArduBlock";
+	
+	private Editor editor;
 	
 	public enum OsType
 	{
@@ -209,6 +214,13 @@ public class Context
 		}
 	}
 	
+	public void setEditor(Editor e) {
+		editor = e;
+	}
+	
+	public Editor getEditor() {
+		return editor;
+	}
 	
 	
 	public boolean isInArduino() {

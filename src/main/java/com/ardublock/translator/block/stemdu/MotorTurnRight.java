@@ -16,7 +16,16 @@ public class MotorTurnRight extends TranslatorBlock {
 	public String toCode() throws SocketNullException,
 			SubroutineNotDeclaredException {
 		// TODO Auto-generated method stub
-		return null;
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		String speed = translatorBlock.toCode();
+
+		translator.addHeaderFile("STEMDu.h");
+
+		String definitionCode = "STEMDu _STEMDU_robot = STEMDu();";
+		translator.addDefinitionCommand(definitionCode);
+		
+		String ret = "\t_STEMDU_robot.rightM1M2(" + speed + ");\n";
+		return ret;
 	}
 
 }

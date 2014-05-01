@@ -12,6 +12,7 @@ public class InversedAnalogOutputBlock extends AnalogOutputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
@@ -19,10 +20,10 @@ public class InversedAnalogOutputBlock extends AnalogOutputBlock
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
 		
-		String setupCode = "\tpinMode( " + portNum + " , OUTPUT);";
+		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
 		translator.addSetupCommand(setupCode);
 		
-		String ret = "\tanalogWrite(" + portNum + ", 255 - (" + value + " ));\n";
+		String ret = "analogWrite(" + portNum + ", 255 - (" + value + " ));\n";
 		
 		return ret;
 	}

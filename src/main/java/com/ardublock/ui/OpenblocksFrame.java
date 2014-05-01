@@ -1,38 +1,42 @@
 package com.ardublock.ui;
 
-import java.awt.Component;
+import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Dimension;
-import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JButton;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
-import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Workspace;
 
 import com.ardublock.core.Context;
 import com.ardublock.ui.listener.ArdublockWorkspaceListener;
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.NewButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
+import com.ardublock.ui.listener.OpenblocksFrameListener;
 import com.ardublock.ui.listener.SaveAsButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
-import com.ardublock.ui.listener.OpenblocksFrameListener;
+import com.ardublock.ui.listener.HardwareConfiguratorButtonListener;
+import com.ardublock.ui.listener.DataLoggerButtonListener;
+
+import edu.mit.blocks.controller.WorkspaceController;
+import edu.mit.blocks.workspace.Workspace;
 
 
 public class OpenblocksFrame extends JFrame
@@ -68,7 +72,7 @@ public class OpenblocksFrame extends JFrame
 	{
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
-		this.setSize(new Dimension(1024, 860));
+		this.setSize(new Dimension(1024, 760));
 		this.setLayout(new BorderLayout());
 		//put the frame to the center of screen
 		this.setLocationRelativeTo(null);
@@ -86,14 +90,14 @@ public class OpenblocksFrame extends JFrame
 	
 	private void initOpenBlocks()
 	{
-		Context context = Context.getContext();
+		final Context context = Context.getContext();
 		
 		/*
 		WorkspaceController workspaceController = context.getWorkspaceController();
 		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
 		*/
 		
-		Workspace workspace = context.getWorkspace();
+		final Workspace workspace = context.getWorkspace();
 		
 		// WTF I can't add worksapcelistener by workspace contrller
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
@@ -110,17 +114,52 @@ public class OpenblocksFrame extends JFrame
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
-
+		JButton serialMonitorButton = new JButton(uiMessageBundle.getString("ardublock.ui.serialMonitor"));
+		serialMonitorButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				context.getEditor().handleSerial();
+			}
+		});
+		JButton saveImageButton = new JButton(uiMessageBundle.getString("ardublock.ui.saveImage"));
+		saveImageButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				Dimension size = workspace.getCanvasSize();
+				System.out.println("size: " + size);
+				BufferedImage bi = new BufferedImage(1280, 2560, BufferedImage.TYPE_INT_RGB);
+				Graphics g = bi.createGraphics();
+				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
+				try{
+					final JFileChooser fc = new JFileChooser();
+					fc.setSelectedFile(new File("ardublock.jpg"));
+					int returnVal = fc.showSaveDialog(workspace.getBlockCanvas().getJComponent());
+			        if (returnVal == JFileChooser.APPROVE_OPTION) {
+			            File file = fc.getSelectedFile();
+						ImageIO.write(bi,"jpg",file);
+			        }
+				} catch (Exception e1) {
+					
+				} finally {
+					g.dispose();
+				}
+			}
+		});
+		JButton dataLoggerButton = new JButton(uiMessageBundle.getString("stemdu.ui.dataLogger"));
+		dataLoggerButton.addActionListener(new DataLoggerButtonListener(this, context));
+		JButton hwConfigButton = new JButton(uiMessageBundle.getString("stemdu.ui.hwConfig"));
+		hwConfigButton.addActionListener(new HardwareConfiguratorButtonListener(this, context));
+		
 		buttons.add(newButton);
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
+		buttons.add(serialMonitorButton);
+		buttons.add(hwConfigButton);
+		buttons.add(dataLoggerButton);
 
 		JPanel bottomPanel = new JPanel();
 		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
 		websiteButton.addActionListener(new ActionListener () {
-			@Override
 			public void actionPerformed(ActionEvent e) {
 			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
 			    URL url;
@@ -135,8 +174,11 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
+		
+		bottomPanel.add(saveImageButton);
 		bottomPanel.add(websiteButton);
 		bottomPanel.add(versionLabel);
+
 		
 		this.add(buttons, BorderLayout.NORTH);
 		this.add(bottomPanel, BorderLayout.SOUTH);

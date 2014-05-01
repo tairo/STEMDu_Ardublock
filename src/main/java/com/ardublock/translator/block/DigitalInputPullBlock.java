@@ -19,15 +19,17 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	
+	@Override
 	protected String generateCodeUsingNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String number;
 		number = translatorBlock.toCode();
-		translator.addInputPin(Long.parseLong(number));
-		translator.addSetupCommand("\tdigitalWrite(" + number + ", HIGH);");
+		translator.addInputPin(number.trim());
+		translator.addSetupCommand("digitalWrite(" + number + ", HIGH);");
 		return "" ;
 	}
 	
+	@Override
 	protected String generateCodeUsingNonNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_INPUT_PULLUP_DEFINE);

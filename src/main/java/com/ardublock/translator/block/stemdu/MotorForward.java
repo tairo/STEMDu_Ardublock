@@ -16,14 +16,14 @@ public class MotorForward extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		// TODO Auto-generated method stub
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String portNum = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		String value = translatorBlock.toCode();
+		String speed = translatorBlock.toCode();
+
+		translator.addHeaderFile("STEMDu.h");
+
+		String definitionCode = "STEMDu _STEMDU_robot = STEMDu();";
+		translator.addDefinitionCommand(definitionCode);
 		
-		String setupCode = "\tpinMode( " + portNum + " , OUTPUT);";
-		translator.addSetupCommand(setupCode);
-		
-		String ret = "\tanalogWrite(" + portNum + " , " + value + ");\n";
+		String ret = "\t_STEMDU_robot.forwardM1M2(" + speed + ");\n";
 		return ret;
 	}
 
