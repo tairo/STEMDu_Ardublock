@@ -24,7 +24,7 @@ public class MotorBackwardM3M4 extends TranslatorBlock {
 		String definitionCode = "STEMDu _STEMDU_robot = STEMDu();";
 		translator.addDefinitionCommand(definitionCode);
 		
-		String ret = "\t_STEMDU_robot.backwardM1M2(" + speed + ");\n";
+		String ret = "\t_STEMDU_robot.backwardM3M4(" + speed + ");\n";
 		return ret;
 	}
 
