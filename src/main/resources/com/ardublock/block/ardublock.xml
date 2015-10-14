@@ -1238,6 +1238,37 @@
 			</Images>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_ultrasonic_sensor_ping" kind="data" color="255 10 10" initlabel="bg.stemdu_ultrasonic_sensor_ping">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/ultrasonic.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_compass_sensor" kind="data" color="255 10 10" initlabel="bg.stemdu_compass_sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.format">
+					<DefaultArg genus-name="number" label="bc.degree" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_compass_sensor_reset" kind="command" color="255 10 10" initlabel="bg.stemdu_compass_sensor_reset">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.format">
+					<DefaultArg genus-name="number" label="bc.degree" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<!--****************** Utilities *************** -->		
 		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
@@ -5177,9 +5208,13 @@
 			<BlockGenusMember>stemdu_distance_sensor</BlockGenusMember>
 			<BlockGenusMember>robodesigner_JES7023</BlockGenusMember>
 			<BlockGenusMember>robodesigner_RDI203JR</BlockGenusMember>
+			<BlockGenusMember>stemdu_ultrasonic_sensor_ping</BlockGenusMember>
+			<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
+			<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
 			</BlockDrawer>
 		<!-- *** STEM Du END *** -->
-
+		<!-- NOT USE ANOTHER KIT'S BLOCKS FOR STEM Du version -->
+		<!--
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
@@ -5310,7 +5345,6 @@
 				<BlockGenusMember>me_motor_1</BlockGenusMember>
 				<BlockGenusMember>me_shutter_1</BlockGenusMember>
 			</BlockDrawer>
-			<!-- 
 			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
 			    <BlockGenusMember>ws_setting</BlockGenusMember>
 			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
@@ -5329,7 +5363,7 @@
 				<BlockGenusMember>ws_danger</BlockGenusMember>
 				<BlockGenusMember>ws_binoculars</BlockGenusMember>
 			</BlockDrawer>
-			 -->
+
 			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
 			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
 			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
@@ -5338,7 +5372,8 @@
 			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
-			
+		-->
+
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
@@ -5376,6 +5411,7 @@
 		    -->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
+
 		</BlockDrawerSet>
 	</BlockDrawerSets>
 

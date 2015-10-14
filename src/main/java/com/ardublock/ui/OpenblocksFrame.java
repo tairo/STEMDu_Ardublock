@@ -145,8 +145,8 @@ public class OpenblocksFrame extends JFrame
 		});
 		JButton dataLoggerButton = new JButton(uiMessageBundle.getString("stemdu.ui.dataLogger"));
 		dataLoggerButton.addActionListener(new DataLoggerButtonListener(this, context));
-		JButton hwConfigButton = new JButton(uiMessageBundle.getString("stemdu.ui.hwConfig"));
-		hwConfigButton.addActionListener(new HardwareConfiguratorButtonListener(this, context));
+		//JButton hwConfigButton = new JButton(uiMessageBundle.getString("stemdu.ui.hwConfig"));
+		//hwConfigButton.addActionListener(new HardwareConfiguratorButtonListener(this, context));
 		
 		buttons.add(newButton);
 		buttons.add(saveButton);
@@ -154,7 +154,7 @@ public class OpenblocksFrame extends JFrame
 		buttons.add(openButton);
 		buttons.add(generateButton);
 		buttons.add(serialMonitorButton);
-		buttons.add(hwConfigButton);
+		//buttons.add(hwConfigButton);
 		buttons.add(dataLoggerButton);
 
 		JPanel bottomPanel = new JPanel();
@@ -352,8 +352,6 @@ public class OpenblocksFrame extends JFrame
 		this.setTitle(this.makeFrameTitle());
 		this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 	}
-	
-	
 	
 	private File checkFileSuffix(File saveFile)
 	{
