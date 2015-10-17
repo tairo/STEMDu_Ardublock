@@ -14,6 +14,7 @@ import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.TranslatorBlockFactory;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
@@ -29,6 +30,7 @@ public class Translator
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private List<String> setupCommand;
+	private List<String> guinoCommand;
 	private Set<String> functionNameSet;
 	private Set<TranslatorBlock> bodyTranslatreFinishCallbackSet;
 	private BlockAdaptor blockAdaptor;
@@ -38,11 +40,17 @@ public class Translator
 	
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
+	private Map<String, String> stringVariableSet;
+	private Map<String, Object> internalData;
 	
 	private Workspace workspace;
 	
-	private int variableCnt;
+	private String rootBlockName;
 	
+	private int variableCnt;
+	private boolean isScoopProgram;
+	private boolean isGuinoProgram;
+
 	public Translator(Workspace ws)
 	{
 		workspace = ws;
@@ -80,20 +88,26 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		headerCommand.append("void setup()\n{\n");
+		return headerCommand.toString() + generateSetupFunction() +generateGuinoFunction();
+	}
+	
+	public String generateSetupFunction()
+	{
+		StringBuilder setupFunction = new StringBuilder();
+		setupFunction.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())
 		{
 			for (String pinNumber:inputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + ", INPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (String pinNumber:outputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + ", OUTPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , OUTPUT);\n");
 			}
 		}
 		
@@ -101,15 +115,35 @@ public class Translator
 		{
 			for (String command:setupCommand)
 			{
-				headerCommand.append(command + "\n");
+				setupFunction.append(command + "\n");
 			}
 		}
 		
-		headerCommand.append("}\n\n");
-		return headerCommand.toString();
+		setupFunction.append("}\n\n");
+		
+		return setupFunction.toString();
 	}
 	
-	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException
+	public String generateGuinoFunction()
+	{
+		StringBuilder guinoFunction = new StringBuilder();
+		
+		
+		if (!guinoCommand.isEmpty())
+		{
+			guinoFunction.append("void GUINO_DEFINIR_INTERFACE()\n{\n");
+			for (String command:guinoCommand)
+			{
+				guinoFunction.append(command + "\n");
+			}
+			guinoFunction.append("}\n\n");
+		}
+		
+		
+		return guinoFunction.toString();
+	}
+	
+	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException, BlockException
 	{
 		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
 		Block block = workspace.getEnv().getBlock(blockId);
@@ -127,6 +161,7 @@ public class Translator
 		headerFileSet = new LinkedHashSet<String>();
 		definitionSet = new LinkedHashSet<String>();
 		setupCommand = new LinkedList<String>();
+		guinoCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<String>();
 		outputPinSet = new HashSet<String>();
@@ -134,10 +169,16 @@ public class Translator
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();
+		stringVariableSet = new HashMap<String, String>();
 		
+		internalData =  new HashMap<String, Object>();
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
 		variableCnt = 0;
+		
+		rootBlockName = null;
+		isScoopProgram = false;
+		isGuinoProgram = false;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -166,6 +207,13 @@ public class Translator
 		setupCommand.add(command);
 	}
 	
+	public void addGuinoCommand(String command)
+	{
+		
+			guinoCommand.add(command);
+		
+	}
+	
 	public void addDefinitionCommand(String command)
 	{
 		definitionSet.add(command);
@@ -191,6 +239,11 @@ public class Translator
 		return booleanVariableSet.get(userVarName);
 	}
 	
+	public String getStringVariable(String userVarName)
+	{
+		return stringVariableSet.get(userVarName);
+	}
+	
 	public void addNumberVariable(String userVarName, String internalName)
 	{
 		numberVariableSet.put(userVarName, internalName);
@@ -199,6 +252,11 @@ public class Translator
 	public void addBooleanVariable(String userVarName, String internalName)
 	{
 		booleanVariableSet.put(userVarName, internalName);
+	}
+	
+	public void addStringVariable(String userVarName, String internalName)
+	{
+		stringVariableSet.put(userVarName, internalName);
 	}
 	
 	public void addFunctionName(Long blockId, String functionName) throws SubroutineNameDuplicatedException
@@ -251,12 +309,36 @@ public class Translator
 		bodyTranslatreFinishCallbackSet.add(translatorBlock);
 	}
 
-	public void beforeGenerateHeader() {
+	public void beforeGenerateHeader()  throws SocketNullException, SubroutineNotDeclaredException
+	{
 		for (TranslatorBlock translatorBlock : bodyTranslatreFinishCallbackSet)
 		{
 			translatorBlock.onTranslateBodyFinished();
 		}
 		
+	}
+
+	public String getRootBlockName() {
+		return rootBlockName;
+	}
+
+	public void setRootBlockName(String rootBlockName) {
+		this.rootBlockName = rootBlockName;
+	}
+
+	public boolean isScoopProgram() {
+		return isScoopProgram;
+	}
+
+	public void setScoopProgram(boolean isScoopProgram) {
+		this.isScoopProgram = isScoopProgram;
+	}
+	public boolean isGuinoProgram() {
+		return isGuinoProgram;
+	}
+
+	public void setGuinoProgram(boolean isGuinoProgram) {
+		this.isGuinoProgram = isGuinoProgram;
 	}
 	
 	public Set<RenderableBlock> findEntryBlocks()
@@ -342,5 +424,15 @@ public class Translator
 		code.insert(0, genreateHeaderCommand());
 		
 		return code.toString();
+	}
+	
+	public Object getInternalData(String name)
+	{
+		return internalData.get(name);
+	}
+	
+	public void addInternalData(String name, Object value)
+	{
+		internalData.put(name, value);
 	}
 }

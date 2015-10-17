@@ -1,0 +1,547 @@
+
+#X-Generator: crowdin.com
+bc.start=スタート
+bc.end=ストップ
+bg.constrain=制限
+bc.low=から
+bc.high=まで
+bg.sd_write2=SDカードへの書き込む
+bg.sd_write=SD フラッシュ書き込み
+bg.sd_return=戻る
+bd.storage=ストレージ
+bc.device_address=デバイスアドレス
+bc.register_address=レジスターアドレス
+bc.watchdog_enable=有効にする
+bc.eeprom_address=アドレス
+bc.eeprom_data=データ
+bc.ln=最後に改行
+bc.message=メッセージ 2
+
+bg.variable_poly=char 変数名
+bg.setter_variable_char=char 変数に値をセット
+bd.chars=文字テスト
+bg.not_equal_poly=≠
+bg.glue_poly=文字列に変換
+bg.serial_read_poly=シリアルから数字を読込
+bg.serial_available=未読バイト数
+bg.loop2=プログラム
+bg.program=プログラム
+bc.setup=セットアップ
+bg.setup=セットアップ
+bc.par=インプット
+bc.num=\#
+bc.vecsize=サイズ
+bg.variable_vector=配列名
+bc.position=番
+bg.create_variable_vector=新しく配列を用意する
+bg.setter_variable_vector=配列に値を設定する
+
+bg.code_setup=セットアップ
+bg.code_loop=ずっと
+bg.serial_read=シリアルから1バイト読込
+bd.especial=高度な設定
+bg.repeat=回数を変数に入れて繰り返し
+bd.especial=はじめに
+bg.not_equal_digital=≠
+bc.var=繰り返し変数名
+
+# BlockDrawer name
+bc.angle=角度
+bc.base=底（基数）
+bc.condition=条件
+#bc.base=底
+bc.else=でなければ
+bc.exponent=指数
+bc.from=から
+bc.level=レベル
+bc.max=最大
+bc.min=最小
+bc.microseconds=マイクロ秒
+bc.milliseconds=ミリ秒
+# BlockConnector label
+bc.pin_number=ポート（ピン）番号
+bc.test=もし
+bc.status=状態
+bc.then=なら
+bc.to=まで
+bc.value=値
+bc.variable=変数
+bc.frequency=周波数
+bc.do=実行
+bc.motor_channel=モーター 番号
+bc.motor_speed=モータ速度
+
+bd.control=制御
+bd.dfrobot=DFRobot
+bd.number=数値
+bd.operators=演算
+#bd.operators=計算する
+bd.pins=ポート（ピン）
+#bd.pins=ピン
+bd.seeedstudio=Seeed Studio Grove
+bd.tinkerkit=TinkerKit
+bd.number=変数/定数
+
+bd.communication=通信
+
+#linksprite
+bd.linksprite_LinkerKit=Linker Kit
+
+bd.utilities=ユーティリティ
+# BlockGenus initlabel
+bg.df_lcd_keypad=LCD キーパッド
+bg.Tinker_Accmeter=加速度計
+bg.Tinker_Button=ボタン
+bg.Tinker_Hall=磁気センサ
+bg.Tinker_I0=I0
+bg.Tinker_I1=I1
+bg.Tinker_I2=I2
+bg.Tinker_I3=I3
+bg.Tinker_I4=I4
+bg.Tinker_I5=I5
+bg.Tinker_LDR=光センサ
+bg.Tinker_LED=LED
+bg.Tinker_LED_pwm=LED
+bg.Tinker_LinearPotentiometer=スライダー
+bg.Tinker_Mosfet=MOSFET
+bg.Tinker_Mosfet_pwm=MOSFET
+bg.Tinker_O0=O0
+bg.Tinker_O1=O1
+bg.Tinker_O2=O2
+bg.Tinker_O3=O3
+bg.Tinker_O4=O4
+bg.Tinker_O5=O5
+bg.Tinker_Relay=リレー                         
+bg.Tinker_RotaryPotentiometer=ボリューム
+bg.Tinker_Servo=サーボ
+bg.Tinker_Thermistor=温度センサ
+bg.Tinker_Tilt=傾きセンサ
+bg.Tinker_Touch=タッチセンサ
+bg.abs=絶対値
+#bg.addition=+
+bg.and=かつ
+bg.cos=cos
+bg.delay=ミリ秒待つ
+#bg.delay=ミリ秒待つ
+bg.delay_microseconds=マイクロ秒待つ
+bg.df_360_degree_rotation_motor=360度回転モーター
+bg.df_adjustable_infrared_sensor_switch=赤外線センサースイッチ
+bg.df_analog_ambient_light_sensor=アナログ光センサ
+bg.df_analog_gas_sensor=アナログガスセンサ            
+bg.df_analog_grayscale_sensor=アナロググレースケールセンサ
+bg.df_analog_rotation_sensor_v1=アナログボリューム V1
+bg.df_analog_rotation_sensor_v2=アナログボリューム V2
+bg.df_analog_sound_sensor=アナログ音センサ
+bg.df_capacitive_touch_sensor=静電容量式タッチセンサ
+bg.df_digital_infrared_motion_sensor=デジタル赤外線動体センサ
+bg.df_digital_ir_receiver_module=デジタル赤外線受光モジュール
+bg.df_digital_push_button=デジタルプッシュボタン
+bg.df_digital_viberation_sensor=デジタル振動センサ
+bg.df_flame_sensor=アナログ炎センサー
+bg.df_joystick_module_button=ジョイスティックモジュール ボタン
+bg.df_joystick_module_x=ジョイスティックモジュール(X軸)
+bg.df_joystick_module_y=ジョイスティックモジュール(Y軸)
+bg.df_led=LEDモジュール
+bg.df_led_pwm=調光LED
+bg.df_line_tracking_sensor=ライントレースセンサ
+bg.df_mma7260_x=三軸加速度センサーMMA7260（X軸）
+bg.df_mma7260_y=三軸加速度センサーMMA7260（Y軸）
+bg.df_mma7260_z=三軸加速度センサーMMA7260（Z軸）
+bg.df_piranha_led=ピラニアLEDモジュール
+bg.df_piranha_led_pwm=ピラニア調光LED
+bg.df_pizeo_disk_vibration_sensor=圧電振動センサ
+bg.df_relay=リレー
+bg.df_servo=サーボ
+bg.df_temperature_sensor=温度センサー
+bg.df_buzzer=ブザー
+bg.df_buzzer_tone=ブザー
+bg.df_buzzer_tone_delay=ブザー
+bg.digital-high=ハイ（デジタル）
+bg.digital-low=ロー（デジタル）
+bg.digital-off=オフ（デジタル）
+bg.digital-on=オン（デジタル）
+#bg.digital-high=HIGH
+#bg.digital-low=LOW
+#bg.digital-off=オフ
+3bg.digital-on=オン
+bg.false=偽(FALSE)
+#bg.glue_sb=論理値を文字列に変換
+#bg.glue_sb=真偽値を文字列に
+bg.glue_sn=数値を文字列に変換
+
+bg.df_digital_tilt_sensor=デジタル傾斜センサー
+bg.df_digital_magnetic_sensor=デジタル磁気センサー
+bg.df_analog_co_sensor=アナログ一酸化炭素センサー
+bg.df_analog_voltage_divider=アナログ分圧回路
+bg.df_analog_mma7361_x=加速度計：X 軸
+bg.df_analog_mma7361_y=加速度計：Y 軸
+bg.df_analog_mma7361_z=加速度計：Z軸
+bg.df_analog_gp2y0a21=距離センサー（シャープ GP2Y0A21）
+
+bg.digital-high=HIGH
+bg.digital-low=LOW
+bg.digital-off=オフ
+bg.digital-on=オン
+bg.addition=＋
+bg.equal=＝
+bg.division=÷
+bg.false=偽
+bg.glue_sb=真偽値を文字列に
+#bg.glue_sn=真偽値を文字列に
+bg.greater=＞
+bg.greater_equal=≧
+bg.if=もし～なら～
+bg.ifelse=もし～なら～でなければ～
+bg.less=＜
+bg.less_equal=≦
+bg.program=プログラム
+bc.setup=初期化ルーチン
+bc.loop=ずっと（メインループ）
+bg.loop=ずっと（メインループ）
+#bg.loop=ずっと
+bg.subroutine=サブルーチン
+bg.subroutine-ref=サブルーチン
+bg.map=マップ
+bg.map_common=[0, 1023]を[0, 255]にマップする
+bg.max=最大
+bg.message=文字列
+bg.millis=ミリ秒
+bg.min=最小
+bg.modulo=剰余（あまり）
+#bg.multiplication=x
+#bg.min=最小
+#bg.modulo=割り算の余り
+bg.multiplication=×
+bg.not=ではない
+bg.not_equal=≠
+bg.number=1
+bg.number_double=3.1415927
+bg.or=または
+bg.pin-read-analog=アナログポート（ピン）             
+bg.pin-read-digital=デジタルポート（ピン）                
+bg.pin-write-analog=アナログ値をポート（ピン）に設定する
+bg.pin-write-digital=デジタル値をポート（ピン）に設定する
+#bg.pin-read-analog=アナログピン
+#bg.pin-read-digital=デジタルピン
+bg.pin-read-digital-pullup=入力プルアップ
+#bg.pin-write-analog=アナログ出力
+#bg.pin-write-digital=デジタルピンに値を設定
+bg.pow=べき乗
+bg.random=乱数
+bg.repeat_times=～回繰り返す
+bg.seeed_joystick=Groveサムジョイスティック
+bg.seeed_joystick_button=Groveサムジョイスティックのボタン
+bg.watchdog_setup=ウォッチドッグ
+bg.watchdog_reset=ウォッチドッグのリセット
+bg.random_range=乱数
+
+
+#linksprite
+bg.ls_ButtonModule=ボタン モジュール
+bg.ls_BuzzerModule=ブザー モジュール
+bg.ls_HighPowerLedModule=ハイパワー LED モジュール
+bg.ls_JoystickSensorModule_x=ジョイスティック モジュール (X軸)
+bg.ls_JoystickSensorModule_y=ジョイスティック モジュール (Y軸)
+bg.ls_LEDBar=LED バー
+bg.ls_Linear-SlidePotentiometerModule=スライド型ポテンショメータモジュール
+bg.ls_MagneticSwitch=磁気スイッチ
+bg.ls_MosfetModule=MOS-FET モジュール
+bg.ls_RelayModule=リレー モジュール
+bg.ls_RotaryPotentiometerModule=回転式ポテンショメータ モジュール
+bg.ls_SoundSensor=音センサー
+bg.ls_ThermalModule=サーマル ・ モジュール
+bg.ls_TiltModule=傾斜モジュール
+bg.ls_TouchSensorModule=タッチ センサー モジュール
+
+bg.serial_println=シリアルに出力して改行
+bg.serial_print=シリアルに出力
+bg.servo=サーボ
+bg.servo_prefix=サーボ\:
+bg.servo_default=標準
+bg.setter_variable_digital=論理変数に値を設定する
+bg.setter_variable_number=数値変数に値を設定する
+#bg.setter_variable_number=数値変数に値を設定
+bg.sin=sin
+bg.sqrt=平方根
+bg.true=真(TRUE)
+bg.ultrasonic=超音波センサ
+bg.variable_digital=論理値変数名
+bg.subtraction=-
+bg.tan=tan
+bg.variable_number=数値変数名
+bg.while=～の間ずっと
+bg.wire_isread=I2Cから読み込めた？
+bg.wire_read=I2Cから読み込む
+bg.wire_write=I2Cに書き出す
+bg.true=真
+
+bg.ultrasonic=超音波
+bg.LCD_command_cursorOn=カーソル オン
+bg.LCD_command_cursorOff=カーソル オフ
+bg.LCD_command_blinkOn=点滅 オン
+bg.LCD_command_blinkOff=点滅 オフ
+bg.variable_digital=論理変数名
+bg.variable_number=整数の変数名
+bg.variable_number_unsigned_long=大きな整数の変数名
+bg.while=繰り返し
+bg.wire_isread=I2C 読み込みOK?
+bg.wire_read=I2C から読み込む
+bg.wire_write=I2C へ書き込む
+bg.tone=トーン
+bg.tone_time=トーン
+bg.xcj_ms_digital_read=Xinchejian 論理値読み込み
+bg.xcj_ms_digital_write=Xinchejian 論理値書き出し
+bg.no_tone=停止
+bg.xcj_motor_backward=モーター シールド 逆回転
+bg.xcj_motor_forward=モーターシールド 正回転
+bg.xcj_ms_digital_read=Xinchejian 真偽値読み込み
+bg.xcj_ms_digital_write=Xinchejian 真偽値書き出し
+
+bd.logic=判断条件
+
+ardublock.file.suffix=ArduBlockプログラムファイル(*.abp)
+ardublock.ui.new=新規作成
+ardublock.ui.save=保存
+ardublock.ui.saveAs=名前をつけて保存
+ardublock.ui.load=開く
+ardublock.ui.upload=Arduinoにアップロード
+ardublock.ui.clone=複製
+ardublock.ui.add_comment=コメントを追加
+ardublock.ui.delete_comment=コメントを削除
+ardublock.ui.organize_blocks=すべてのブロックを整理
+ardublock.ui.website=Web サイト
+ardublock.ui.serialMonitor=シリアルモニタ
+ardublock.ui.saveImage=画像で保存
+
+ardublock.translator.exception.noLoopFound=loopがありません
+ardublock.translator.exception.multipleLoopFound=loopが多すぎます
+ardublock.translator.exception.subroutineNotDeclared=サブルーチンが宣言されていません
+
+message.title.error=エラー
+message.title.question=質問
+message.content.open_unsaved=ArduBlockのプログラムは変更されています。保存しますか?
+message.content.overwrite=既存のファイルを上書きしますか?
+message.file_not_found=ファイルが見つからないか権限がありません
+message.question.newfile_on_workspace_changed=プログラムが変更されました。新しい Ardublock ファイルを作成しますか？
+
+bc.repeat_times=回
+
+# Descriptions of all Block
+
+bg.loop.description=メインプログラムのループ
+
+
+bg.subroutine.description=サブルーチンを追加する
+bg.pin-read-analog.description=ピンからアナログ値を読み取る
+bg.pin-read-digital.description=ピンからデジタル値を読み取る
+bg.pin-read-digital-pullup.description=デジタルピンに内部プルアップを設定します
+bg.addition.description=2 つの数値の合計
+bg.subtraction.description=2 つの数値の差
+bg.multiplication.description=2 つの数値の積
+bg.division.description=2 つの数値の商
+bg.greater.description=最初の数が2番目の数以上のとき「真」
+bg.less.description=最初の数が2番目の数より小さいとき「真」
+bg.equal.description=最初の数と2番目の数が等しいとき「真」
+bg.equal_digital.description=最初の数と2番目の数が等しいとき「真」
+bg.greater_equal.description=最初の数が2番目の数以上なら「真」
+bg.less_equal.description=最初の数が2番目の数以下なら「真」
+bg.not_equal.description=最初の数と2番目の数が等しくないとき「真」
+bg.not_equal_digital.description=最初の数と2番目の数が等しくないとき「真」
+bg.and.description=どちらも満たすとき「真」
+bg.or.description=どちらかの条件を満たすとき「真」
+bg.not.description=～の反対
+bg.equal_poly.description=最初の文字と 2 番目の文字が等しい場合は「真」
+bg.not_equal_poly.description=最初の文字と 2 番目の文字が等しくなければ「真」
+bg.true.description=ブール値は 真 です。
+bg.false.description=ブール値は偽です。
+bg.servo.description=サーボを制御
+bg.ultrasonic.description=超音波距離センサー
+bg.tone.description=指定された周波数 （50% デューティ サイクル） の方形波を生成して，ピンに出力します。
+bg.serial_print.description=シリアル ポート経由でメッセージを送信する。
+bg.message.description=テキスト メッセージ
+bg.glue_sn.description=数値を文字列に
+bg.glue_sb.description=真偽値を文字列に
+bg.glue_poly.description=文字を文字列に
+bg.wire_write.description=I2C を介してデータを書き込む
+bg.wire_read.description=I2C からデータの読み取り
+bg.wire_isread.description=I2Cからの読み込み成功？
+bg.eeprom_read.description=EEPROM から1バイト (0-255) を読みます。各バイトは 1 つだけの EEPROM アドレスを消費します。[Ok] は、連続したアドレスを使用します。
+bg.eeprom_write.description=EEPROM に1バイト (0-255) を 書き込みます。各バイトは 1 つだけの EEPROM アドレスを消費します。[Ok] は、連続したアドレスを使用します。
+bg.sd_write2.description=SD カードへの書き込み
+bg.Tinker_LED.description=TinkerKit LED
+bg.Tinker_LED_pwm.description=TinkerKit LED
+bg.Tinker_Mosfet.description=TinkerKit MOS-FET
+bg.Tinker_Mosfet_pwm.description=TinkerKit MOS-FET
+bg.Tinker_Relay.description=TinkerKit リレー
+bg.Tinker_Servo.description=TinkerKit サーボ
+bg.Tinker_Button.description=TinkerKit ボタン
+bg.Tinker_Accmeter.description=TinkerKit 加速度センサー
+bg.Tinker_LDR.description=TinkerKit LDR
+bg.Tinker_LinearPotentiometer.description=TinkerKit 加速度センサー
+bg.Tinker_Thermistor.description=TinkerKit サーミスタ
+bg.Tinker_Tilt.description=TinkerKit Tilt
+bg.df_flame_sensor.description=ピンからアナログ値を読み取る
+bg.df_analog_mma7361_x.description=ピンからアナログ値を読み取る
+bg.df_analog_mma7361_y.description=ピンからアナログ値を読み取る
+bg.df_analog_mma7361_z.description=ピンからアナログ値を読み取る
+bg.df_analog_gp2y0a21.description=ピンからアナログ値を読み取る
+bg.df_analog_moisture.description=ピンからアナログ値を読み取る
+bg.df_temperature_sensor.description=ピンからアナログ値を読み取る
+bg.df_joystick_module_x.description=ピンからアナログ値を読み取る
+bg.df_joystick_module_y.description=ピンからアナログ値を読み取る
+bg.df_mma7260_x.description=ピンからアナログ値を読み取る
+bg.df_mma7260_y.description=ピンからアナログ値を読み取る
+bg.df_mma7260_z.description=ピンからアナログ値を読み取る
+bg.df_analog_rotation_sensor_v1.description=ピンからアナログ値を読み取る
+bg.df_analog_rotation_sensor_v2.description=ピンからアナログ値を読み取る
+bg.df_analog_sound_sensor.description=ピンからアナログ値を読み取る
+bg.df_analog_gas_sensor.description=ピンからアナログ値を読み取る
+bg.df_analog_co_sensor.description=ピンからアナログ値を読み取る
+bg.df_analog_voltage_divider.description=ピンからアナログ値を読み取る
+bg.df_servo.description=\ ピンに PWM値を設定する
+bg.df_360_degree_rotation_motor.description=\ ピンに PWM値を設定する
+bg.df_led.description=LED モジュール
+bg.df_led_pwm.description=LED モジュール
+bg.df_relay.description=リレー モジュール
+bg.df_buzzer.description=ブザー モジュール
+bg.df_buzzer_tone.description=指定された周波数 （50% デューティ サイクル） の方形波を生成しますし，ピンに出力します。
+bg.df_buzzer_tone_delay.description=指定された周波数 （50% デューティ サイクル） の方形波を生成して，ピンに出力します。
+bg.seeed_o2_sensor=ガスセンサー（酸素）
+bg.seeed_uv_sensor=UV センサー
+bg.seeed_single_gyro=1軸のアナログジャイロ
+bg.seeed_mq9_sensor=ガスセンサー(MQ9)
+bg.seeed_mp3_sensor=ガスセンサー(MQ3)
+bg.seeed_vib_sensor=圧電振動センサー
+bg.seeed_diff_amp=差動増幅器
+bg.seeed_ir_temp_sensor=赤外線温度センサー
+bg.seeed_electricity_sensor=電気センサー
+bg.seeed_angle_sensor=回転角センサー
+bg.seeed_sound_sensor=音センサー
+bg.seeed_moisture_sensor=水分センサー
+bg.seeed_temp_sensor=音センサー
+
+bg.seeed_flame_sensor=炎センサー
+bg.seeed_button=ボタン
+bg.seeed_switch=スイッチ
+bg.seeed_heart_rate_sensor=耳クリップ型心拍数センサー
+bg.seeed_line_finder=ラインセンサー
+bg.seeed_tilt_switch=傾斜スイッチ
+bg.seeed_push_button=ボタン
+bg.seeed_water_sensor=水センサー
+
+bg.seeed_led=LED
+
+bg.seeed_uv_sensor.description=-UV センサーは紫外線 （UV） の強度を検出するために使用されます。
+bg.seeed_mq9_sensor.description=ガス センサー モジュールはガス漏れを検出に便利です。LPG、イソブタン、メタン、アルコール、水素、煙などを検出できます。
+bg.seeed_mp3_sensor.description=ガス センサー モジュールはガス漏れを検出に便利です。LPG、イソブタン、メタン、アルコール、水素、煙などを検出できます。
+
+bg.seeed_button.description=ボタン
+bg.seeed_switch.description=スイッチ
+bg.seeed_push_button.description=ボタン
+
+bg.ls_ButtonModule.description=ボタン モジュール
+bg.ls_BuzzerModule.description=ブザー モジュール
+bg.ls_JoystickSensorModule_x.description=ジョイスティックモジュール
+bg.ls_JoystickSensorModule_y.description=ジョイスティックモジュール
+bg.ls_RelayModule.description=リレー モジュール
+bg.ls_RotaryPotentiometerModule.description=回転式ポテンショメータ モジュール
+bg.ls_SoundSensor.description=音センサー
+bg.ls_ThermalModule.description=サーマル ・ モジュール
+bg.ls_TiltModule.description=傾斜モジュール
+bg.ls_TouchSensorModule.description=タッチ センサー モジュール
+bg.random_range.description=最小値と （最大値 - 1) の間の乱数を生成します。
+
+bd.network=ネットワーク
+bg.bleshield=BLE シールド
+bg.bleshield.description=Bluetooth 通信の BLE シールド
+bg.bleshield_available=BLE シールドの準備OK？
+bg.bleshield_read_poly=BLE シールドから読み込み
+
+#bd.adafruit.description=Adafruit モーターシールド
+
+#workshop blocks 
+
+#InsectBot blocks
+
+
+##iDrawing blocks
+
+
+
+
+
+
+
+
+#
+
+
+
+
+
+#
+
+
+
+
+
+
+
+
+
+
+
+#
+
+
+
+
+
+
+
+
+#legacy support
+
+# littlebits 
+
+
+#STEM Du
+stemdu.ui.hwConfig=ハードウェアコンフィギュレータ
+stemdu.ui.dataLogger=データロガー
+bg.stemdu_motor=モーター
+bg.stemdu_move_fwd=前進
+bg.stemdu_move_bwd=後進（バック）
+bg.stemdu_move_left_turn=左旋回
+bg.stemdu_move_right_turn=右旋回
+bg.stemdu_move_tank=タンク移動
+bg.stemdu_stop=停止
+bg.stemdu_brake=ブレーキ
+bg.stemdu_move_fwd_M3M4=前進 M3M4
+bg.stemdu_move_bwd_M3M4=後進（バック） M3M4
+bg.stemdu_move_left_turn_M3M4=左旋回 M3M4
+bg.stemdu_move_right_turn_M3M4=右旋回 M3M4
+bg.stemdu_move_tank_M3M4=タンク移動 M3M4
+bg.stemdu_stop_M3M4=停止 M3M4
+bg.stemdu_brake_M3M4=ブレーキ M3M4
+bd.stemdu=STEM Du
+bd.stemdu_accessory=STEM Duアクセサリ
+bc.speed=スピード
+bc.speed1=左スピード
+bc.speed2=右スピード
+bg.stemdu_led_analog=LED
+bg.stemdu_led_digital=LED
+bg.stemdu_light_sensor=明るさセンサ
+bg.stemdu_sound_sensor=音センサ
+bg.stemdu_slider=スライダー
+bg.stemdu_push_sw=押ボタン
+bg.stemdu_distance_sensor=赤外線距離センサ
+bg.robodesigner_JES7023=赤外線センサ
+bg.robodesigner_RDI203JR=赤外線パルス光センサ
+bg.stemdu_ultrasonic_sensor_ping=超音波距離センサ
+bg.stemdu_compass_sensor=コンパスセンサ
+bg.stemdu_compass_sensor_reset=コンパスセンサ原点リセット
+bc.format=出力形式
+bc.degree=度
+bc.radian=ラジアン
+bc.relative=相対値？
+
