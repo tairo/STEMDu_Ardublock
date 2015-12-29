@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/poi-3.9.jar"/>
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="/openblocks/target/openblocks-1.0.1-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

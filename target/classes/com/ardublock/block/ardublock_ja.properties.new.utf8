@@ -540,8 +540,8 @@ bg.robodesigner_RDI203JR=赤外線パルス光センサ
 bg.stemdu_ultrasonic_sensor_ping=超音波距離センサ
 bg.stemdu_compass_sensor=コンパスセンサ
 bg.stemdu_compass_sensor_reset=コンパスセンサ原点リセット
+bg.stemdu_serial1_println=シリアル１に出力
 bc.format=出力形式
 bc.degree=度
 bc.radian=ラジアン
 bc.relative=相対値？
-
