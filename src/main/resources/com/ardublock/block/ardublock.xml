@@ -379,7 +379,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D8" label="D8" />
+					<DefaultArg genus-name="DuinoEDU_D0" label="D0" /> <!-- for STEM Du -->
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
 					<DefaultArg genus-name="number" label="440" />
@@ -396,7 +396,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D8" label="D8" />
+					<DefaultArg genus-name="DuinoEDU_D0" label="D0" /> <!-- for STEM Du -->
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
 					<DefaultArg genus-name="number" label="440" />
@@ -1786,25 +1786,25 @@
 
 		<!-- ******************** Communication *************** -->
 
-		<BlockGenus name="serial_read" kind="data" color="245 245 245" initlabel="bg.serial_read">
+		<BlockGenus name="serial_read" kind="data" color="220 220 220" initlabel="bg.serial_read">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_read_poly" kind="data" color="245 245 245" initlabel="bg.serial_read">
+		<BlockGenus name="serial_read_poly" kind="data" color="220 220 220" initlabel="bg.serial_read">
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_available" kind="data" color="245 245 245" initlabel="bg.serial_available">
+		<BlockGenus name="serial_available" kind="data" color="220 220 220" initlabel="bg.serial_available">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_print" kind="command" color="245 245 245" initlabel="bg.serial_print">
+		<BlockGenus name="serial_print" kind="command" color="220 220 220" initlabel="bg.serial_print">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -1828,7 +1828,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="glue_sn" kind="data" color="245 245 245" initlabel="bg.glue_sn">
+		<BlockGenus name="glue_sn" kind="data" color="220 220 220" initlabel="bg.glue_sn">
 			<description>
 				<text>glue number to string</text>
 			</description>
@@ -1838,7 +1838,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="glue_sb" kind="data" color="245 245 245" initlabel="bg.glue_sb">
+		<BlockGenus name="glue_sb" kind="data" color="220 220 220" initlabel="bg.glue_sb">
 			<description>
 				<text>glue boolean to string</text>
 			</description>
@@ -1848,7 +1848,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="glue_poly" kind="data" color="245 245 245" initlabel="bg.glue_poly" editable-label="no">
+		<BlockGenus name="glue_poly" kind="data" color="220 220 220" initlabel="bg.glue_poly" editable-label="no">
 			<description>
 				<text></text>
 			</description>
@@ -1858,7 +1858,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="wire_write" kind="command" color="245 245 245" initlabel="bg.wire_write">
+		<BlockGenus name="wire_write" kind="command" color="220 220 220" initlabel="bg.wire_write">
 			<description>
 				<text>write data via I2C</text>
 			</description>
@@ -5816,6 +5816,18 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_D0" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+
+		<BlockGenus name="DuinoEDU_D1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+
 		<BlockGenus name="DuinoEDU_D2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -8953,6 +8965,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_builtin_distance_sensor" kind="data" color="255 10 10" initlabel="bg.stemdu_builtin_distance_sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="robodesigner_JES7023" kind="data" color="255 10 10" initlabel="bg.robodesigner_JES7023">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
@@ -9334,6 +9352,8 @@
 			<FamilyMember>DuinoEDU_Barometer_Altitude</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_D0</FamilyMember>
+			<FamilyMember>DuinoEDU_D1</FamilyMember>
 			<FamilyMember>DuinoEDU_D2</FamilyMember>
 			<FamilyMember>DuinoEDU_D3</FamilyMember>
 			<FamilyMember>DuinoEDU_D4</FamilyMember>
@@ -9577,6 +9597,7 @@
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
+				<BlockGenusMember>stemdu_builtin_distance_sensor</BlockGenusMember>
 				<BlockGenusMember>stemdu_distance_sensor</BlockGenusMember>
 				<BlockGenusMember>robodesigner_JES7023</BlockGenusMember>
 				<BlockGenusMember>robodesigner_RDI203JR</BlockGenusMember>
