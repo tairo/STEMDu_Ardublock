@@ -8971,6 +8971,48 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_mpu6050_temperature_sensor" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_temperature_sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_accelerometer_x_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_x_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_accelerometer_y_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_y_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_accelerometer_z_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_z_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_gyro_x_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_x_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_gyro_y_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_y_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_mpu6050_gyro_z_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_z_axis">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="robodesigner_JES7023" kind="data" color="255 10 10" initlabel="bg.robodesigner_JES7023">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
@@ -8995,6 +9037,20 @@
 			<Images>
 				<Image>
 					<FileLocation>com/ardublock/block/robodesigner/RDI203JR.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="robodesigner_RDI211" kind="data" color="255 10 10" initlabel="bg.robodesigner_RDI211">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/robodesigner/RDI211.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -9031,6 +9087,17 @@
 		<BlockGenus name="stemdu_serial1_println" kind="command" color="200 200 200" initlabel="bg.stemdu_serial1_println">
 			<description>
 				<text>send message via Serial1 port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_spilcd_print" kind="command" color="200 200 200" initlabel="bg.stemdu_spilcd_print">
+			<description>
+				<text>show message on SPI LCD</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
@@ -9598,13 +9665,22 @@
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
 				<BlockGenusMember>stemdu_builtin_distance_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_temperature_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_accelerometer_x_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_accelerometer_y_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_accelerometer_z_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_distance_sensor</BlockGenusMember>
 				<BlockGenusMember>robodesigner_JES7023</BlockGenusMember>
 				<BlockGenusMember>robodesigner_RDI203JR</BlockGenusMember>
+				<BlockGenusMember>robodesigner_RDI211</BlockGenusMember>
 				<BlockGenusMember>stemdu_ultrasonic_sensor_ping</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
 				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
+				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 			</BlockDrawer>
 		<!-- *** STEM Du END *** -->
 		
