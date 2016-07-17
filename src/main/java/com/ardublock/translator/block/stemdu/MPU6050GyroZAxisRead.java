@@ -23,7 +23,7 @@ public class MPU6050GyroZAxisRead extends TranslatorBlock{
 		// TODO Auto-generated constructor stub
 	}
 
-	private final static String mpu6050Function = "int16_t ardublockMPU6050GyroZAxisReturnCM(){\n  _STEMDU_accelgyro.getRotation(&_STEMDU_gx, &_STEMDU_gy, &_STEMDU_gz);\n  return _STEMDU_gz / 131.0;\n}\n";
+	private final static String mpu6050Function = "double ardublockMPU6050GyroZAxisReturnCM(){\n  _STEMDU_accelgyro.getRotation(&_STEMDU_gx, &_STEMDU_gy, &_STEMDU_gz);\n  return _STEMDU_gz / 131.0;\n}\n";
 	
 	@Override
 	public String toCode() throws SocketNullException,

@@ -8889,6 +8889,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_resistance_sensor" kind="data" color="255 180 0" initlabel="bg.stemdu_resistance_sensor">
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="stemdu_push_sw" kind="data" color="255 180 0" initlabel="bg.push_sw">
 			<BlockConnectors>
 			<BlockConnector connector-type="boolean" connector-kind="plug" />
@@ -9104,8 +9110,12 @@
 					<DefaultArg genus-name="message" label="message" />
 				</BlockConnector>
 			</BlockConnectors>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
 		</BlockGenus>
-
 	</BlockGenuses>
 
 		<!--****************** END OF STEM Du *************** -->		
@@ -9639,7 +9649,7 @@
 			</BlockDrawer>
 			-->
 		<!-- *** STEM Du *** -->
-			<BlockDrawer button-color="255 41 0" name="bd.stemdu" type="factory">
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_output" type="factory">
 				<BlockGenusMember>stemdu_led_digital</BlockGenusMember>
 				<BlockGenusMember>stemdu_led_analog</BlockGenusMember>
 				<BlockGenusMember>stemdu_motor</BlockGenusMember>
@@ -9650,10 +9660,8 @@
 				<BlockGenusMember>stemdu_move_tank</BlockGenusMember>
 				<BlockGenusMember>stemdu_stop</BlockGenusMember>
 				<BlockGenusMember>stemdu_brake</BlockGenusMember>
-				<BlockGenusMember>stemdu_light_sensor</BlockGenusMember>
-				<BlockGenusMember>stemdu_sound_sensor</BlockGenusMember>
-				<BlockGenusMember>stemdu_slider</BlockGenusMember>
-				<BlockGenusMember>stemdu_push_sw</BlockGenusMember>
+				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
+				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_fwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_bwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_left_turn_M3M4</BlockGenusMember>
@@ -9663,7 +9671,12 @@
 				<BlockGenusMember>stemdu_brake_M3M4</BlockGenusMember>
 			</BlockDrawer>
 
-			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_input" type="factory">
+				<BlockGenusMember>stemdu_light_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_slider</BlockGenusMember>
+				<BlockGenusMember>stemdu_push_sw</BlockGenusMember>
+				<BlockGenusMember>stemdu_resistance_sensor</BlockGenusMember>
 				<BlockGenusMember>stemdu_builtin_distance_sensor</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_temperature_sensor</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_accelerometer_x_axis</BlockGenusMember>
@@ -9672,6 +9685,9 @@
 				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
+			</BlockDrawer>
+
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
 				<BlockGenusMember>stemdu_distance_sensor</BlockGenusMember>
 				<BlockGenusMember>robodesigner_JES7023</BlockGenusMember>
 				<BlockGenusMember>robodesigner_RDI203JR</BlockGenusMember>
@@ -9679,8 +9695,6 @@
 				<BlockGenusMember>stemdu_ultrasonic_sensor_ping</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
-				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
-				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 			</BlockDrawer>
 		<!-- *** STEM Du END *** -->
 		

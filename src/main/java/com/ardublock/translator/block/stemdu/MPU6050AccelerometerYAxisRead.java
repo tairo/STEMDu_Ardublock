@@ -23,7 +23,7 @@ public class MPU6050AccelerometerYAxisRead extends TranslatorBlock{
 		// TODO Auto-generated constructor stub
 	}
 
-	private final static String mpu6050Function = "int16_t ardublockMPU6050AccelerometerYAxisReturnCM(){\n  _STEMDU_accelgyro.getAcceleration(&_STEMDU_ax, &_STEMDU_ay, &_STEMDU_az);\n  return _STEMDU_ay / 16384.0;\n}\n";
+	private final static String mpu6050Function = "double ardublockMPU6050AccelerometerYAxisReturnCM(){\n  _STEMDU_accelgyro.getAcceleration(&_STEMDU_ax, &_STEMDU_ay, &_STEMDU_az);\n  return _STEMDU_ay / 16384.0;\n}\n";
 	@Override
 	public String toCode() throws SocketNullException,
 			SubroutineNotDeclaredException {
