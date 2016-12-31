@@ -9090,11 +9090,88 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_serial1_read" kind="data" color="220 220 220" initlabel="bg.stemdu_serial1_read">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_serial1_read_poly" kind="data" color="220 220 220" initlabel="bg.stemdu_serial1_read">
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_serial1_available" kind="data" color="220 220 220" initlabel="bg.stemdu_serial1_available">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+	
 		<BlockGenus name="stemdu_serial1_println" kind="command" color="200 200 200" initlabel="bg.stemdu_serial1_println">
 			<description>
 				<text>send message via Serial1 port</text>
 			</description>
 			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_software_serial_read" kind="data" color="220 220 220" initlabel="bg.stemdu_software_serial_read">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.txport">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_software_serial_read_poly" kind="data" color="220 220 220" initlabel="bg.stemdu_software_serial_read">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.txport">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_software_serial_available" kind="data" color="220 220 220" initlabel="bg.stemdu_software_serial_available">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.txport">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="stemdu_software_serial_println" kind="command" color="200 200 200" initlabel="bg.stemdu_software_serial_println">
+			<description>
+				<text>send message via SoftwareSerial with specific port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.txport">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket">
 					<DefaultArg genus-name="message" label="message" />
 				</BlockConnector>
@@ -9660,7 +9737,6 @@
 				<BlockGenusMember>stemdu_move_tank</BlockGenusMember>
 				<BlockGenusMember>stemdu_stop</BlockGenusMember>
 				<BlockGenusMember>stemdu_brake</BlockGenusMember>
-				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
 				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_fwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_bwd_M3M4</BlockGenusMember>
@@ -9683,8 +9759,8 @@
 				<BlockGenusMember>stemdu_mpu6050_accelerometer_y_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_accelerometer_z_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
-				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
-				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_y_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_z_axis</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
@@ -9696,6 +9772,15 @@
 				<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
 			</BlockDrawer>
+
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_communication" type="factory">
+				<BlockGenusMember>stemdu_serial1_read</BlockGenusMember>
+				<BlockGenusMember>stemdu_serial1_available</BlockGenusMember>
+				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
+				<BlockGenusMember>stemdu_software_serial_read</BlockGenusMember>
+				<BlockGenusMember>stemdu_software_serial_available</BlockGenusMember>
+				<BlockGenusMember>stemdu_software_serial_println</BlockGenusMember>
+			</BlockDrawer>    
 		<!-- *** STEM Du END *** -->
 		
 			<!--

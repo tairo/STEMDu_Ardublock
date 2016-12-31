@@ -7,11 +7,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/openblocks"/>
 	<classpathentry kind="lib" path="lib/pde.jar"/>
-	<classpathentry kind="var" path="M2_REPO/junit/junit/4.10/junit-4.10.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/apache/poi/poi/3.9/poi-3.9.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml-schemas/3.9/poi-ooxml-schemas-3.9.jar"/>
-	<classpathentry kind="var" path="M2_REPO"/>
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="/Users/tairo/Documents/workspace42_ardublock/STEMDu_Ardublock/lib/poi-3.9.jar"/>

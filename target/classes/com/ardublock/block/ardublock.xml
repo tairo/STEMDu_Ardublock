@@ -9683,8 +9683,8 @@
 				<BlockGenusMember>stemdu_mpu6050_accelerometer_y_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_accelerometer_z_axis</BlockGenusMember>
 				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
-				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
-				<BlockGenusMember>stemdu_mpu6050_gyro_x_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_y_axis</BlockGenusMember>
+				<BlockGenusMember>stemdu_mpu6050_gyro_z_axis</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_accessory" type="factory">
