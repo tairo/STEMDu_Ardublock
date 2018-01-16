@@ -102,7 +102,6 @@ abstract public class TranslatorBlock
 		return this.comment;
 	}
 	
-	//public void onTranslateBodyFinished(){}
 	public void onTranslateBodyFinished() throws SocketNullException, SubroutineNotDeclaredException{}
-
+	
 }
