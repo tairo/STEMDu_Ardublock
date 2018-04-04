@@ -11480,6 +11480,38 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_i2clcd_print" kind="command" color="200 200 200" initlabel="bg.stemdu_i2clcd_print">
+			<description>
+				<text>show message on I2C LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posx">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posy">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_servo" kind="command" color="255 102 0" label="bg.stemdu_servo">
+			<description>
+				<text>Standard Servo like SG90</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D10" label="D10"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<!--****************** END OF STEM Du *************** -->		
 
 	</BlockGenuses>
@@ -12333,6 +12365,8 @@
 				<BlockGenusMember>stemdu_stop</BlockGenusMember>
 				<BlockGenusMember>stemdu_brake</BlockGenusMember>
 				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
+				<BlockGenusMember>stemdu_i2clcd_print</BlockGenusMember>
+				<BlockGenusMember>stemdu_servo</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_fwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_bwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_left_turn_M3M4</BlockGenusMember>
