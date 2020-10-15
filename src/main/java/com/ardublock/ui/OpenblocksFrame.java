@@ -146,7 +146,11 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 		JButton dataLoggerButton = new JButton(uiMessageBundle.getString("stemdu.ui.dataLogger"));
-		dataLoggerButton.addActionListener(new DataLoggerButtonListener(this, context));
+		dataLoggerButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				context.getEditor().handlePlotter();
+			}
+		});
 		//JButton hwConfigButton = new JButton(uiMessageBundle.getString("stemdu.ui.hwConfig"));
 		//hwConfigButton.addActionListener(new HardwareConfiguratorButtonListener(this, context));
 		

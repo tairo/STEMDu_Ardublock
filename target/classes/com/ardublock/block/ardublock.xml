@@ -283,7 +283,8 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
+
+<!--  OBSOLETE ** change to "Task" for both AVR and ESP32
 		<BlockGenus name="scoop_task" kind="command" color="26 97 218" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
@@ -390,7 +391,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+-->
 		
 		
 		<!--****************** Pins *************** -->
@@ -2884,6 +2885,7 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+		
 		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
@@ -11159,31 +11161,31 @@
 
 		<BlockGenus name="stemdu_light_sensor" kind="data" color="255 180 0" initlabel="bg.stemdu_light_sensor">
 			<BlockConnectors>
-			<BlockConnector connector-type="number" connector-kind="plug" />
+			<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_sound_sensor" kind="data" color="255 180 0" initlabel="bg.stemdu_sound_sensor">
 			<BlockConnectors>
-			<BlockConnector connector-type="number" connector-kind="plug" />
+			<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_slider" kind="data" color="255 180 0" initlabel="bg.stemdu_slider">
 			<BlockConnectors>
-			<BlockConnector connector-type="number" connector-kind="plug" />
+			<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_resistance_sensor" kind="data" color="255 180 0" initlabel="bg.stemdu_resistance_sensor">
 			<BlockConnectors>
-			<BlockConnector connector-type="number" connector-kind="plug" />
+			<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_push_sw" kind="data" color="255 180 0" initlabel="bg.push_sw">
 			<BlockConnectors>
-			<BlockConnector connector-type="boolean" connector-kind="plug" />
+			<BlockConnector connector-type="boolean" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -11259,49 +11261,49 @@
 
 		<BlockGenus name="stemdu_builtin_distance_sensor" kind="data" color="255 10 10" initlabel="bg.stemdu_builtin_distance_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_temperature_sensor" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_temperature_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_accelerometer_x_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_x_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_accelerometer_y_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_y_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_accelerometer_z_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_accelerometer_z_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_gyro_x_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_x_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_gyro_y_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_y_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 		<BlockGenus name="stemdu_mpu6050_gyro_z_axis" kind="data" color="255 10 10" initlabel="bg.stemdu_mpu6050_gyro_z_axis">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -11362,8 +11364,6 @@
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
-			</BlockConnectors>
-			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.relative">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
@@ -11396,7 +11396,7 @@
 	
 		<BlockGenus name="stemdu_serial1_println" kind="command" color="200 200 200" initlabel="bg.stemdu_serial1_println">
 			<description>
-				<text>send message via Serial1 port</text>
+				<text>send message via Serial1 port with newline</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
@@ -11405,6 +11405,17 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_serial1_print" kind="command" color="200 200 200" initlabel="bg.stemdu_serial1_print">
+			<description>
+				<text>send message via Serial1 port without newline</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="stemdu_software_serial_read" kind="data" color="220 220 220" initlabel="bg.stemdu_software_serial_read">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.txport">
@@ -11413,8 +11424,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
 					<DefaultArg genus-name="number" label="8" />
 				</BlockConnector>
-			</BlockConnectors>
-			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
@@ -11427,8 +11436,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
 					<DefaultArg genus-name="number" label="8" />
 				</BlockConnector>
-			</BlockConnectors>
-			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
@@ -11441,8 +11448,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rxport">
 					<DefaultArg genus-name="number" label="8" />
 				</BlockConnector>
-			</BlockConnectors>
-			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
@@ -11466,23 +11471,7 @@
 
 		<BlockGenus name="stemdu_spilcd_print" kind="command" color="200 200 200" initlabel="bg.stemdu_spilcd_print">
 			<description>
-				<text>show message on SPI LCD</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
-				</BlockConnector>
-			</BlockConnectors>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="stemdu_i2clcd_print" kind="command" color="200 200 200" initlabel="bg.stemdu_i2clcd_print">
-			<description>
-				<text>show message on I2C LCD</text>
+				<text>show message on SPI LCD 16x2</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posx">
@@ -11491,14 +11480,38 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posy">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
-			</BlockConnectors>			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
 					<DefaultArg genus-name="message" label="message" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="stemdu_servo" kind="command" color="255 102 0" label="bg.stemdu_servo">
+		<BlockGenus name="stemdu_i2clcd_print" kind="command" color="200 200 200" initlabel="bg.stemdu_i2clcd_print">
+			<description>
+				<text>show message on I2C LCD 16x2</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posx">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.posy">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_i2clcd_clear" kind="command" color="200 200 200" initlabel="bg.stemdu_i2clcd_clear">
+			<description>
+				<text>clear message on I2C LCD</text>
+			</description>
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_servo" kind="command" color="255 102 0" initlabel="bg.stemdu_servo">
 			<description>
 				<text>Standard Servo like SG90</text>
 			</description>
@@ -11508,6 +11521,372 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="esp32_servo" kind="command" color="255 102 0" initlabel="bg.stemdu_servo">
+			<description>
+				<text>ESP32 Servo for standard servo like SG90</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D27" label="D27"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="stemdu_esp32_tone" kind="command" color="255 102 0" initlabel="bg.stemdu_esp32_tone">
+			<description>
+				<text>ESP32 Tone command</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D27" label="D27" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_esp32_notone" kind="command" color="255 102 0" initlabel="bg.stemdu_esp32_notone">
+			<description>
+				<text>ESP32 noTone command</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D27" label="D27" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_esp32_tone_duration" kind="command" color="255 102 0" initlabel="bg.stemdu_esp32_tone_duration">
+			<description>
+				<text>ESP32 Tone with Duration command</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D27" label="D27" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+        <BlockGenus name="stemdu_oled_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_setup">
+            <description>
+                <text>OLED SSD1306 128x64 display</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3C"/>
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Width">
+                    <DefaultArg genus-name="number" label="128" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+                    <DefaultArg genus-name="number" label="64" />
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_display" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_display">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: display() </text>
+            </description>
+            <BlockConnectors>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_clear" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_clear">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: clearDisplay() </text>
+            </description>
+            <BlockConnectors>
+			</BlockConnectors>
+        </BlockGenus>
+        
+        <BlockGenus name="stemdu_oled_draw_pixel" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_pixel">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: drawPixel() </text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_draw_bitmap" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_bitmap">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: bitmap() </text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.bitmapnum">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_splite_setup">
+            <description>
+                <text>Archade : Sprite Setup</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.bitmapnum">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.show">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_move_xy" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_xy">
+            <description>
+                <text>Archade : Sprite move to (x,y)</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="10" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_set_x" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_set_x">
+            <description>
+                <text>Archade : Sprite set x</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_set_y" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_set_y">
+            <description>
+                <text>Archade : Sprite set y</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+   
+        <BlockGenus name="stemdu_oled_sprite_move_by_x" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_by_x">
+            <description>
+                <text>Archade : Sprite move by x</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.byX">
+                    <DefaultArg genus-name="number" label="1" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_move_by_y" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_by_y">
+            <description>
+                <text>Archade : Sprite move by y</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.byY">
+                    <DefaultArg genus-name="number" label="1" />
+                </BlockConnector>
+			</BlockConnectors>
+        </BlockGenus>
+
+		<BlockGenus name="stemdu_oled_sprite_x" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_sprite_x">
+			<description>
+                	<text>Archade : Sprite x</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_oled_sprite_y" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_sprite_y">
+			<description>
+                	<text>Archade : Sprite y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_show" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_show">
+            <description>
+                <text>Archade : Sprite show</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+        	</BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_oled_sprite_hide" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_hide">
+            <description>
+                <text>Archade : Sprite hide</text>
+            </description>
+            <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+        	</BlockConnectors>
+        </BlockGenus>
+
+		<BlockGenus name="stemdu_oled_sprite_collision_any" kind="function" color="205 133 63" initlabel="bg.stemdu_oled_sprite_collision_any">
+			<description>
+				<text>Archade : Sprite collide any showing pixel?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_oled_sprite_collision_splite" kind="function" color="205 133 63" initlabel="bg.stemdu_oled_sprite_collision_splite">
+			<description>
+				<text>Archade : Sprite collide other splite?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum1">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>				
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.spritenum2">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+       <BlockGenus name="stemdu_oled_draw_line" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_line">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: drawLine() </text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.XStart">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.YStart">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.XEnd">
+                    <DefaultArg genus-name="number" label="127" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.YEnd">
+                    <DefaultArg genus-name="number" label="63" />
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+       <BlockGenus name="stemdu_oled_draw_rect" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_rect">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: drawRect() </text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="63" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="31" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Width">
+                    <DefaultArg genus-name="number" label="20" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+                    <DefaultArg genus-name="number" label="64" />
+                </BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+       <BlockGenus name="stemdu_oled_draw_circle" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_circle">
+            <description>
+                <text>OLED SSD1306 128x64 display Adafruit library command: drawCircle() </text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.X">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.Y">
+                    <DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.radius">
+                    <DefaultArg genus-name="number" label="128" />
+                </BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+		<BlockGenus name="stemdu_esp32_analog_write" kind="command" color="213 0 0" initlabel="bg.stemdu_esp32_analog_write">
+			<description>
+				<text>ESP32 write analog to pin 12,13,14,18,19,25,26,27</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D12" label="D12" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -11792,6 +12171,7 @@
 			<FamilyMember>me_shutter_3</FamilyMember>
 			<FamilyMember>me_shutter_4</FamilyMember>
 		</BlockFamily>
+<!-- 
 		<BlockFamily>
 		    <FamilyMember>scoop_event_low</FamilyMember>
 		    <FamilyMember>scoop_event_high</FamilyMember>
@@ -11799,6 +12179,7 @@
 		    <FamilyMember>scoop_event_rising</FamilyMember>
 		    <FamilyMember>scoop_event_change</FamilyMember>
 		</BlockFamily>
+-->
 		<BlockFamily>
 			<FamilyMember>led_mode_flash</FamilyMember>
 			<FamilyMember>led_mode_fade</FamilyMember>
@@ -12294,6 +12675,7 @@
 				<BlockGenusMember>serial_available2</BlockGenusMember>
 				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_parseInt</BlockGenusMember>
+<!--
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_switch</BlockGenusMember>
@@ -12307,7 +12689,10 @@
 				<BlockGenusMember>Serialplus_send_variable_digital</BlockGenusMember>
 				<BlockGenusMember>Serialplus_receive_number</BlockGenusMember>
 				<BlockGenusMember>Serialplus_receive_digital</BlockGenusMember>
+-->
 			</BlockDrawer>
+			
+<!-- OBSOLETE ** change to Task to support both AVR and ESP32
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
 				<BlockGenusMember>scoop_loop</BlockGenusMember>
@@ -12319,6 +12704,7 @@
 				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
 				<BlockGenusMember>scoop_event_change</BlockGenusMember>
 			</BlockDrawer>
+-->
 			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
 				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
 				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
@@ -12364,8 +12750,9 @@
 				<BlockGenusMember>stemdu_move_tank</BlockGenusMember>
 				<BlockGenusMember>stemdu_stop</BlockGenusMember>
 				<BlockGenusMember>stemdu_brake</BlockGenusMember>
-				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 				<BlockGenusMember>stemdu_i2clcd_print</BlockGenusMember>
+				<BlockGenusMember>stemdu_i2clcd_clear</BlockGenusMember>
+				<BlockGenusMember>stemdu_spilcd_print</BlockGenusMember>
 				<BlockGenusMember>stemdu_servo</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_fwd_M3M4</BlockGenusMember>
 				<BlockGenusMember>stemdu_move_bwd_M3M4</BlockGenusMember>
@@ -12406,10 +12793,43 @@
 				<BlockGenusMember>stemdu_serial1_read</BlockGenusMember>
 				<BlockGenusMember>stemdu_serial1_available</BlockGenusMember>
 				<BlockGenusMember>stemdu_serial1_println</BlockGenusMember>
+				<BlockGenusMember>stemdu_serial1_print</BlockGenusMember>
 				<BlockGenusMember>stemdu_software_serial_read</BlockGenusMember>
 				<BlockGenusMember>stemdu_software_serial_available</BlockGenusMember>
 				<BlockGenusMember>stemdu_software_serial_println</BlockGenusMember>
-			</BlockDrawer>    
+			</BlockDrawer>
+
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_esp32" type="factory">
+				<BlockGenusMember>stemdu_esp32_tone</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_notone</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_tone_duration</BlockGenusMember>
+				<BlockGenusMember>esp32_servo</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_analog_write</BlockGenusMember>
+			</BlockDrawer>
+
+			<BlockDrawer button-color="255 41 0" name="bd.stemdu_archade" type="factory">
+				<BlockGenusMember>stemdu_oled_setup</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_display</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_clear</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_draw_pixel</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_draw_line</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_draw_rect</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_draw_circle</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_draw_bitmap</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_setup</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_move_xy</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_set_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_set_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_move_by_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_move_by_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_collision_splite</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_collision_any</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_show</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_sprite_hide</BlockGenusMember>
+			</BlockDrawer>
+
 		<!-- *** STEM Du END *** -->
 
 		<!--

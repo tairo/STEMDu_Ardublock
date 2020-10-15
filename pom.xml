@@ -99,7 +99,6 @@
 		<dependency>
 			<groupId>edu.mit</groupId>
 			<artifactId>openblocks</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>arduino</groupId>
@@ -139,4 +138,13 @@
 	    </dependency>
 	</dependencies>
 	<url>http://ardublock.com/</url>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>edu.mit</groupId>
+				<artifactId>openblocks</artifactId>
+				<version>1.0.2-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
