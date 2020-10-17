@@ -30,12 +30,16 @@ public class OLEDSetup extends TranslatorBlock {
 		translator.addHeaderFile("Adafruit_GFX.h");
 		translator.addHeaderFile("Adafruit_SSD1306.h");
 
-		translator.addDefinitionCommand("#define OLED_RESET 4\n");
-		translator.addDefinitionCommand("Adafruit_SSD1306 _stemdu_oled_display(" + this.getTranslatorBlockAtSocket(1).toCode() +"," + this.getTranslatorBlockAtSocket(2).toCode() + ", &Wire, OLED_RESET);\n");
+		translator.addDefinitionCommand("#define _STEMDU_OLED_RESET 4");
+		translator.addDefinitionCommand("#define _STEMDU_OLED_WIDTH  " + this.getTranslatorBlockAtSocket(1).toCode());
+		translator.addDefinitionCommand("#define _STEMDU_OLED_HEIGHT " + this.getTranslatorBlockAtSocket(2).toCode());
+		translator.addDefinitionCommand("#define _STEMDU_OLED_RESET 4");
+
+		translator.addDefinitionCommand("Adafruit_SSD1306 _stemdu_oled_display(_STEMDU_OLED_WIDTH, _STEMDU_OLED_HEIGHT, &Wire, _STEMDU_OLED_RESET);\n");
 
 		translator.addSetupCommand("\tif(!_stemdu_oled_display.begin(SSD1306_SWITCHCAPVCC, 0x" + this.getTranslatorBlockAtSocket(0).toCode() + ")) {\t\tfor(;;);\n\t}\n");
 		
-		return null;
+		return "";
 	}
 
 }

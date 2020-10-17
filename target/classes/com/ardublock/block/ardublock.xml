@@ -11645,7 +11645,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_splite_setup">
+        <BlockGenus name="stemdu_archade_sprite_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_setup">
             <description>
                 <text>Archade : Sprite Setup</text>
             </description>
@@ -11668,7 +11668,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_move_xy" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_xy">
+        <BlockGenus name="stemdu_archade_sprite_move_xy" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_xy">
             <description>
                 <text>Archade : Sprite move to (x,y)</text>
             </description>
@@ -11685,7 +11685,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_set_x" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_set_x">
+        <BlockGenus name="stemdu_archade_sprite_set_x" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_set_x">
             <description>
                 <text>Archade : Sprite set x</text>
             </description>
@@ -11699,7 +11699,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_set_y" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_set_y">
+        <BlockGenus name="stemdu_archade_sprite_set_y" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_set_y">
             <description>
                 <text>Archade : Sprite set y</text>
             </description>
@@ -11713,7 +11713,7 @@
 			</BlockConnectors>
         </BlockGenus>
    
-        <BlockGenus name="stemdu_oled_sprite_move_by_x" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_by_x">
+        <BlockGenus name="stemdu_archade_sprite_move_by_x" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_by_x">
             <description>
                 <text>Archade : Sprite move by x</text>
             </description>
@@ -11727,7 +11727,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_move_by_y" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_move_by_y">
+        <BlockGenus name="stemdu_archade_sprite_move_by_y" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_by_y">
             <description>
                 <text>Archade : Sprite move by y</text>
             </description>
@@ -11741,7 +11741,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-		<BlockGenus name="stemdu_oled_sprite_x" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_sprite_x">
+		<BlockGenus name="stemdu_archade_sprite_x" kind="data" color="205 133 63" initlabel="bg.stemdu_archade_sprite_x">
 			<description>
                 	<text>Archade : Sprite x</text>
 			</description>
@@ -11753,7 +11753,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="stemdu_oled_sprite_y" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_sprite_y">
+		<BlockGenus name="stemdu_archade_sprite_y" kind="data" color="205 133 63" initlabel="bg.stemdu_archade_sprite_y">
 			<description>
                 	<text>Archade : Sprite y</text>
 			</description>
@@ -11765,7 +11765,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_show" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_show">
+        <BlockGenus name="stemdu_archade_sprite_show" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_show">
             <description>
                 <text>Archade : Sprite show</text>
             </description>
@@ -11776,7 +11776,7 @@
         	</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_oled_sprite_hide" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_sprite_hide">
+        <BlockGenus name="stemdu_archade_sprite_hide" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_hide">
             <description>
                 <text>Archade : Sprite hide</text>
             </description>
@@ -11787,7 +11787,7 @@
         	</BlockConnectors>
         </BlockGenus>
 
-		<BlockGenus name="stemdu_oled_sprite_collision_any" kind="function" color="205 133 63" initlabel="bg.stemdu_oled_sprite_collision_any">
+		<BlockGenus name="stemdu_archade_sprite_collision_any" kind="function" color="205 133 63" initlabel="bg.stemdu_archade_sprite_collision_any">
 			<description>
 				<text>Archade : Sprite collide any showing pixel?</text>
 			</description>
@@ -11799,7 +11799,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="stemdu_oled_sprite_collision_splite" kind="function" color="205 133 63" initlabel="bg.stemdu_oled_sprite_collision_splite">
+		<BlockGenus name="stemdu_archade_sprite_collision_splite" kind="function" color="205 133 63" initlabel="bg.stemdu_archade_sprite_collision_splite">
 			<description>
 				<text>Archade : Sprite collide other splite?</text>
 			</description>
@@ -12816,18 +12816,18 @@
 				<BlockGenusMember>stemdu_oled_draw_rect</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_draw_circle</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_draw_bitmap</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_setup</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_move_xy</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_set_x</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_set_y</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_move_by_x</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_move_by_y</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_x</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_y</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_collision_splite</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_collision_any</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_show</BlockGenusMember>
-				<BlockGenusMember>stemdu_oled_sprite_hide</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_setup</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_move_xy</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_set_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_set_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_move_by_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_move_by_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_x</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_y</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_collision_splite</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_collision_any</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_show</BlockGenusMember>
+				<BlockGenusMember>stemdu_archade_sprite_hide</BlockGenusMember>
 			</BlockDrawer>
 
 		<!-- *** STEM Du END *** -->

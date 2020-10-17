@@ -29,13 +29,13 @@ public class OLEDDrawRect extends TranslatorBlock {
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
 		String test = translatorBlock.toCode();
 
-		String ret;
+		String ret ="";
 				
 		if(test.equals("true")){
-			ret = "_stemdu_oled_display.fillRect(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
+			ret = "\t_stemdu_oled_display.fillRect(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
 		}
 		else {
-			ret = "_stemdu_oled_display.drawRect(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
+			ret = "\t_stemdu_oled_display.drawRect(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
 		}
 		return ret;
 	}

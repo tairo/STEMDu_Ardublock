@@ -26,7 +26,9 @@ public class OLEDDrawLine extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
 		// TODO Auto-generated method stub
-		String ret = "_stemdu_oled_display.drawLine(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
+		String ret = "";
+		
+		ret = "\t_stemdu_oled_display.drawLine(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
 
 		return ret;
 	}

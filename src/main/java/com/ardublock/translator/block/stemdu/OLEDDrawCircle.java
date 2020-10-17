@@ -26,16 +26,16 @@ public class OLEDDrawCircle extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
 		// TODO Auto-generated method stub
-		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
 		String test = translatorBlock.toCode();
 
-		String ret;
+		String ret = "";
 				
 		if(test.equals("true")){
-			ret = "_stemdu_oled_display.fillCircle(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
+			ret = "_stemdu_oled_display.fillCircle(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + ", SSD1306_WHITE);\n";
 		}
 		else {
-			ret = "_stemdu_oled_display.drawCircle(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + "," + this.getTranslatorBlockAtSocket(3).toCode() + ", SSD1306_WHITE);\n";
+			ret = "_stemdu_oled_display.drawCircle(" + this.getTranslatorBlockAtSocket(0).toCode() + "," + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + ", SSD1306_WHITE);\n";
 		}
 		return ret;
 	}

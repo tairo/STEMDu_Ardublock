@@ -29,6 +29,8 @@ public class OLEDDrawBitmap extends TranslatorBlock {
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String bitmapNum = translatorBlock.toCode();
 
+		translator.addHeaderFile("STEMDuArchade.h");
+
 		String ret = "_stemdu_oled_display.drawBitmap(" + this.getTranslatorBlockAtSocket(1).toCode() + "," + this.getTranslatorBlockAtSocket(2).toCode() + ",_stemdu_bitmap" + this.getTranslatorBlockAtSocket(0).toCode() + ", 8, 8, SSD1306_WHITE);\n";
 		
 		return ret;
