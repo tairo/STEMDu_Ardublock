@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.esp32;
+package com.ardublock.translator.block.stemdu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -6,19 +6,20 @@ import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class ESP32WiFiCommander extends TranslatorBlock {
+public class ESP32WiFiHTTPCommanderSetup extends TranslatorBlock {
 
-	public ESP32WiFiCommander(Long blockId, Translator translator) {
+	public ESP32WiFiHTTPCommanderSetup(Long blockId, Translator translator) {
 		super(blockId, translator);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ESP32WiFiCommander(Long blockId, Translator translator, String codePrefix, String codeSuffix) {
+	public ESP32WiFiHTTPCommanderSetup(Long blockId, Translator translator, String codePrefix, String codeSuffix) {
 		super(blockId, translator, codePrefix, codeSuffix);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ESP32WiFiCommander(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public ESP32WiFiHTTPCommanderSetup(Long blockId, Translator translator, String codePrefix, String codeSuffix,
+			String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 		// TODO Auto-generated constructor stub
 	}

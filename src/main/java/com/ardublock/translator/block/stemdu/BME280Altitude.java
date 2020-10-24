@@ -6,19 +6,19 @@ import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class BME280TemperatureC extends TranslatorBlock {
+public class BME280Altitude extends TranslatorBlock {
 
-	public BME280TemperatureC(Long blockId, Translator translator) {
+	public BME280Altitude(Long blockId, Translator translator) {
 		super(blockId, translator);
 		// TODO Auto-generated constructor stub
 	}
 
-	public BME280TemperatureC(Long blockId, Translator translator, String codePrefix, String codeSuffix) {
+	public BME280Altitude(Long blockId, Translator translator, String codePrefix, String codeSuffix) {
 		super(blockId, translator, codePrefix, codeSuffix);
 		// TODO Auto-generated constructor stub
 	}
 
-	public BME280TemperatureC(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public BME280Altitude(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 		// TODO Auto-generated constructor stub
 	}
@@ -34,7 +34,6 @@ public class BME280TemperatureC extends TranslatorBlock {
 		translator.addSetupCommand("Wire.begin();\n");
 		translator.addSetupCommand("_STEMDU_BME280_sensor.beginI2C()\n");
 
-		return codePrefix + "_STEMDU_BME280_sensor.readTempC()" + codeSuffix;
+		return codePrefix + "_STEMDU_BME280_sensor.readFloatAltitudeMeters()" + codeSuffix;
 	}
-
 }
