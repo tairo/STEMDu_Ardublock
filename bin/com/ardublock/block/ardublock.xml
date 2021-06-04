@@ -11581,6 +11581,61 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+        <BlockGenus name="stemdu_esp32_wifi_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_wifi_setup">
+            <description>
+                <text>ESP32 WiFi Setup</text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_ssid">
+					<DefaultArg genus-name="message" label="AP SSID" />
+                </BlockConnector>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_passwd">
+                    <DefaultArg genus-name="message" label="pass" />
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_esp32_ambient_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_ambient_setup">
+            <description>
+                <text>ESP32 WiFi Setup</text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.channel_id">
+					<DefaultArg genus-name="message" label="id" />
+                </BlockConnector>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.write_key">
+                    <DefaultArg genus-name="message" label="key" />
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
+        <BlockGenus name="stemdu_esp32_ambient_send" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_ambient_send">
+            <description>
+                <text>ESP32 WiFi Ambient service: send data</text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.ambient_data_no">
+					<DefaultArg genus-name="number" label="0" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.ambient_data">                
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+        
+        <BlockGenus name="stemdu_esp32_wifi_http_commander_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_wifi_http_commander_setup">
+            <description>
+                <text>ESP32 WiFi HTTP Commander Setup</text>
+            </description>
+            <BlockConnectors>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_ssid">
+					<DefaultArg genus-name="message" label="AP SSID" />
+                </BlockConnector>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_passwd">
+                    <DefaultArg genus-name="message" label="pass" />
+                </BlockConnector>
+            </BlockConnectors>
+        </BlockGenus>
+
         <BlockGenus name="stemdu_oled_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_setup">
             <description>
                 <text>OLED SSD1306 128x64 display</text>
@@ -11613,7 +11668,25 @@
             <BlockConnectors>
 			</BlockConnectors>
         </BlockGenus>
-        
+
+		<BlockGenus name="stemdu_oled_width" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_width">
+			<description>
+                	<text>AOLED SSD1306 128x64 display: widht</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="stemdu_oled_height" kind="data" color="205 133 63" initlabel="bg.stemdu_oled_height">
+			<description>
+                	<text>AOLED SSD1306 128x64 display: height</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
         <BlockGenus name="stemdu_oled_draw_pixel" kind="command" color="205 133 63" initlabel="bg.stemdu_oled_draw_pixel">
             <description>
                 <text>OLED SSD1306 128x64 display Adafruit library command: drawPixel() </text>
@@ -11645,7 +11718,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_setup">
+        <BlockGenus name="stemdu_archade_sprite_setup" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_setup">
             <description>
                 <text>Archade : Sprite Setup</text>
             </description>
@@ -11668,7 +11741,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_move_xy" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_xy">
+        <BlockGenus name="stemdu_archade_sprite_move_xy" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_move_xy">
             <description>
                 <text>Archade : Sprite move to (x,y)</text>
             </description>
@@ -11685,7 +11758,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_set_x" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_set_x">
+        <BlockGenus name="stemdu_archade_sprite_set_x" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_move_set_x">
             <description>
                 <text>Archade : Sprite set x</text>
             </description>
@@ -11699,7 +11772,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_set_y" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_set_y">
+        <BlockGenus name="stemdu_archade_sprite_set_y" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_set_y">
             <description>
                 <text>Archade : Sprite set y</text>
             </description>
@@ -11713,7 +11786,7 @@
 			</BlockConnectors>
         </BlockGenus>
    
-        <BlockGenus name="stemdu_archade_sprite_move_by_x" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_by_x">
+        <BlockGenus name="stemdu_archade_sprite_move_by_x" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_move_by_x">
             <description>
                 <text>Archade : Sprite move by x</text>
             </description>
@@ -11727,7 +11800,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_move_by_y" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_move_by_y">
+        <BlockGenus name="stemdu_archade_sprite_move_by_y" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_move_by_y">
             <description>
                 <text>Archade : Sprite move by y</text>
             </description>
@@ -11741,7 +11814,7 @@
 			</BlockConnectors>
         </BlockGenus>
 
-		<BlockGenus name="stemdu_archade_sprite_x" kind="data" color="205 133 63" initlabel="bg.stemdu_archade_sprite_x">
+		<BlockGenus name="stemdu_archade_sprite_x" kind="data" color="135 206 250" initlabel="bg.stemdu_archade_sprite_x">
 			<description>
                 	<text>Archade : Sprite x</text>
 			</description>
@@ -11753,7 +11826,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="stemdu_archade_sprite_y" kind="data" color="205 133 63" initlabel="bg.stemdu_archade_sprite_y">
+		<BlockGenus name="stemdu_archade_sprite_y" kind="data" color="135 206 250" initlabel="bg.stemdu_archade_sprite_y">
 			<description>
                 	<text>Archade : Sprite y</text>
 			</description>
@@ -11765,7 +11838,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_show" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_show">
+        <BlockGenus name="stemdu_archade_sprite_show" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_show">
             <description>
                 <text>Archade : Sprite show</text>
             </description>
@@ -11776,7 +11849,7 @@
         	</BlockConnectors>
         </BlockGenus>
 
-        <BlockGenus name="stemdu_archade_sprite_hide" kind="command" color="205 133 63" initlabel="bg.stemdu_archade_sprite_hide">
+        <BlockGenus name="stemdu_archade_sprite_hide" kind="command" color="135 206 250" initlabel="bg.stemdu_archade_sprite_hide">
             <description>
                 <text>Archade : Sprite hide</text>
             </description>
@@ -11787,7 +11860,7 @@
         	</BlockConnectors>
         </BlockGenus>
 
-		<BlockGenus name="stemdu_archade_sprite_collision_any" kind="function" color="205 133 63" initlabel="bg.stemdu_archade_sprite_collision_any">
+		<BlockGenus name="stemdu_archade_sprite_collision_any" kind="function" color="135 206 250" initlabel="bg.stemdu_archade_sprite_collision_any">
 			<description>
 				<text>Archade : Sprite collide any showing pixel?</text>
 			</description>
@@ -11799,7 +11872,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="stemdu_archade_sprite_collision_splite" kind="function" color="205 133 63" initlabel="bg.stemdu_archade_sprite_collision_splite">
+		<BlockGenus name="stemdu_archade_sprite_collision_splite" kind="function" color="135 206 250" initlabel="bg.stemdu_archade_sprite_collision_splite">
 			<description>
 				<text>Archade : Sprite collide other splite?</text>
 			</description>
@@ -12805,12 +12878,18 @@
 				<BlockGenusMember>stemdu_esp32_tone_duration</BlockGenusMember>
 				<BlockGenusMember>esp32_servo</BlockGenusMember>
 				<BlockGenusMember>stemdu_esp32_analog_write</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_wifi_setup</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_ambient_setup</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_ambient_send</BlockGenusMember>
+				<BlockGenusMember>stemdu_esp32_wifi_http_commander_setup</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_archade" type="factory">
 				<BlockGenusMember>stemdu_oled_setup</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_display</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_clear</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_width</BlockGenusMember>
+				<BlockGenusMember>stemdu_oled_height</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_draw_pixel</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_draw_line</BlockGenusMember>
 				<BlockGenusMember>stemdu_oled_draw_rect</BlockGenusMember>

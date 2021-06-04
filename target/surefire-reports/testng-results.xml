@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="com.ardublock.MainTest" duration-ms="4" started-at="2020-10-21T20:15:32Z" finished-at="2020-10-21T20:15:32Z">
+  <suite name="com.ardublock.MainTest" duration-ms="4" started-at="2021-03-18T04:47:49Z" finished-at="2021-03-18T04:47:49Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4" started-at="2020-10-21T20:15:32Z" finished-at="2020-10-21T20:15:32Z">
+    <test name="Command line test" duration-ms="4" started-at="2021-03-18T04:47:49Z" finished-at="2021-03-18T04:47:49Z">
     </test>
   </suite>
 </testng-results>
