@@ -11597,11 +11597,17 @@
 
         <BlockGenus name="stemdu_esp32_ambient_setup" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_ambient_setup">
             <description>
-                <text>ESP32 WiFi Setup</text>
+                <text>ESP32 WiFi+Ambient Setup</text>
             </description>
             <BlockConnectors>
-                <BlockConnector connector-type="string" connector-kind="socket" label="bc.channel_id">
-					<DefaultArg genus-name="message" label="id" />
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_ssid">
+					<DefaultArg genus-name="message" label="AP SSID" />
+                </BlockConnector>
+                <BlockConnector connector-type="string" connector-kind="socket" label="bc.ap_passwd">
+                    <DefaultArg genus-name="message" label="pass" />
+                </BlockConnector>
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.channel_id">
+					<DefaultArg genus-name="number" label="1111" />
                 </BlockConnector>
                 <BlockConnector connector-type="string" connector-kind="socket" label="bc.write_key">
                     <DefaultArg genus-name="message" label="key" />
