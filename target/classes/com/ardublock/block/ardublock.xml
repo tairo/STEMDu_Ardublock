@@ -11376,6 +11376,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_ccs811_readco2" kind="data" color="255 10 10" initlabel="bg.stemdu_ccs811_readco2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="stemdu_serial1_read" kind="data" color="220 220 220" initlabel="bg.stemdu_serial1_read">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
@@ -11617,13 +11623,14 @@
 
         <BlockGenus name="stemdu_esp32_ambient_send" kind="command" color="205 133 63" initlabel="bg.stemdu_esp32_ambient_send">
             <description>
-                <text>ESP32 WiFi Ambient service: send data</text>
+                <text>ESP32 WiFi+Ambient service: send data</text>
             </description>
             <BlockConnectors>
                 <BlockConnector connector-type="number" connector-kind="socket" label="bc.ambient_data_no">
-					<DefaultArg genus-name="number" label="0" />
+					<DefaultArg genus-name="number" label="1" />
                 </BlockConnector>
-                <BlockConnector connector-type="number" connector-kind="socket" label="bc.ambient_data">                
+                <BlockConnector connector-type="number" connector-kind="socket" label="bc.ambient_data">
+                	<DefaultArg genus-name="number" label="0" />                
                 </BlockConnector>
             </BlockConnectors>
         </BlockGenus>
@@ -12866,6 +12873,7 @@
 				<BlockGenusMember>stemdu_ultrasonic_sensor_ping</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_ccs811_readco2</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_communication" type="factory">

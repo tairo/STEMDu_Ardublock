@@ -11376,6 +11376,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="stemdu_ccs811_readco2" kind="data" color="255 10 10" initlabel="bg.stemdu_ccs811_readco2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="stemdu_serial1_read" kind="data" color="220 220 220" initlabel="bg.stemdu_serial1_read">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
@@ -12867,6 +12873,7 @@
 				<BlockGenusMember>stemdu_ultrasonic_sensor_ping</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor_reset</BlockGenusMember>
 				<BlockGenusMember>stemdu_compass_sensor</BlockGenusMember>
+				<BlockGenusMember>stemdu_ccs811_readco2</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_communication" type="factory">
