@@ -12814,16 +12814,18 @@
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
 				<BlockGenusMember>bleshield_compare</BlockGenusMember>
 			</BlockDrawer>
-			<!--
+			
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
+				<!--
 				<BlockGenusMember>DuinoEDU_code_head</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_code_setup</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_code_loop</BlockGenusMember>
+				  -->
 			</BlockDrawer>
-			-->
+			
 		<!-- *** STEM Du *** -->
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_output" type="factory">
 				<BlockGenusMember>stemdu_led_digital</BlockGenusMember>

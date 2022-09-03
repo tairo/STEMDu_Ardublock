@@ -31,7 +31,7 @@ public class IoTAmbientSend extends TranslatorBlock {
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
 
-		return "ambient.set("+ channel + ", " + value + ");\nambient.send();\n";
+		return "_STEMDU_ambient.set("+ channel + ", " + value + ");\n_STEMDU_ambient.send();\n";
 	}
 
 }

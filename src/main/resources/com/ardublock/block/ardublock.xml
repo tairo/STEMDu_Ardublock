@@ -7162,7 +7162,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="glue_msg" label="HEAD_EN_CACHE0" />
+					<DefaultArg genus-name="glue_msg" label="CODE" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -7172,7 +7172,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="glue_msg" label="SETUP_EN_CACHE0" />
+					<DefaultArg genus-name="glue_msg" label="CODE" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -7182,7 +7182,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="glue_msg" label="LOOP_EN_CACHE0" />
+					<DefaultArg genus-name="glue_msg" label="CODE" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -12808,22 +12808,27 @@
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
 			</BlockDrawer>
+			<!--
 			<BlockDrawer button-color="169 148 212" name="bd.network" type="factory">
 				<BlockGenusMember>bleshield</BlockGenusMember>
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
 				<BlockGenusMember>bleshield_compare</BlockGenusMember>
 			</BlockDrawer>
-			<!--
-			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
+			  -->
+			<BlockDrawer button-color="169 148 212" name="bd.especial" type="factory">
+			 <!-- "120 120 120" -->
+				<!--
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
+				  -->
 				<BlockGenusMember>DuinoEDU_code_head</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_code_setup</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_code_loop</BlockGenusMember>
+
 			</BlockDrawer>
-			-->
+			
 		<!-- *** STEM Du *** -->
 			<BlockDrawer button-color="255 41 0" name="bd.stemdu_output" type="factory">
 				<BlockGenusMember>stemdu_led_digital</BlockGenusMember>
